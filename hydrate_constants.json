@@ -1,0 +1,231 @@
+{
+    "global_settings": {
+        "pixel_scale_fallback": 1.41,
+        "default_overlay_amount": 5,
+        "xy_threshold_um": 120.0,
+        "stitching_max_um": 200.0,
+        "z_step_um_override": -500.0,
+        "persp_center_x": 1224,
+        "persp_center_y": 1024,
+        "persp_scale_per_layer": 0.0093,
+        "focus_overlap_threshold": 0.2,
+        "overlay_match_dist_px": 5.0,
+        "overlay_alpha": 0.7,
+        "overlay_beta": 0.3
+    },
+    "phase_1_detection": {
+        "clip_limit": 1.0,
+        "median_kernel_size": 7,
+        "ed_anchor_thresh": 20,
+        "ed_grad_thresh": 5,
+        "ed_min_path_len": 50,
+        "morph_kernel_size": 11
+    },
+    "phase_1_triage_bounds": {
+        "loose_bounds": {
+            "area_min_px": 310.0,
+            "area_max_px": 50000.0,
+            "ellipse_area_max_px": 80000.0,
+            "aspect_max": 4.0,
+            "circ_min": 0.0,
+            "fill_min": 0.0,
+            "solid_min": 0.0,
+            "bright_min": 90.0,
+            "contrast_min": 0.2,
+            "contrast_max": 2.5
+        },
+        "strict_bounds": {
+            "area_min_px": 500.0,
+            "area_max_px": 35000.0,
+            "ellipse_area_max_px": 30000.0,
+            "aspect_max": 2.6,
+            "circ_min": 0.5,
+            "fill_min": 0.92,
+            "solid_min": 0.95,
+            "bright_min": 120.0,
+            "contrast_min": 0.35,
+            "contrast_max": 1.8
+        }
+    },
+    "phase_2_rescue": {
+        "roi_params": {
+            "roi_factor": 2.5,
+            "filter_roi_border_touching": true,
+            "grid_size": 16
+        },
+        "canny_params": {
+            "blur_kernel_size": 5,
+            "canny_min_val": 12,
+            "canny_max_val": 42,
+            "morph_close_kernel": 15,
+            "morph_close_iter": 2,
+            "min_contour_area_px": 700.0
+        },
+        "adaptive_params": {
+            "blur_kernel_size": 9,
+            "block_size": 37,
+            "c_constant": 4,
+            "invert_binary": true,
+            "morph_open_kernel": 1,
+            "morph_close_kernel": 15,
+            "morph_close_iter": 3,
+            "min_contour_area_px": 700.0
+        }
+    },
+    "calibration_settings": {
+        "match_area_diff_max": 0.6,
+        "match_aspect_diff_max": 0.75,
+        "match_overlap_min": 0.15,
+        "match_fallback_radius_px": 100.0,
+        "fn_penalty_score": 1.0,
+        "fp_penalty_score": 0.5,
+        "fp_blur_radius_px": 60.0,
+        "fixed_total_score_threshold": 5.0,
+        "dummy_eval_penalty": 999999.0,
+        "layer_diff_penalty_score": 50.0,
+        "3d_distance_threshold": 80.0,
+        "3d_roi_radius_factor": 1.0,
+        "bounds_2d": [
+            [
+                5000.0,
+                20000.0
+            ],
+            [
+                3000.0,
+                8000.0
+            ],
+            [
+                0.1,
+                2.0
+            ],
+            [
+                0.1,
+                2.0
+            ],
+            [
+                0.1,
+                2.0
+            ],
+            [
+                0.45,
+                0.75
+            ],
+            [
+                10.0,
+                30.0
+            ],
+            [
+                0.1,
+                2.0
+            ],
+            [
+                0.7,
+                0.9
+            ],
+            [
+                10.0,
+                40.0
+            ],
+            [
+                0.1,
+                2.0
+            ],
+            [
+                0.85,
+                0.95
+            ],
+            [
+                10.0,
+                50.0
+            ],
+            [
+                0.1,
+                2.0
+            ],
+            [
+                80.0,
+                150.0
+            ],
+            [
+                0.1,
+                0.5
+            ],
+            [
+                0.1,
+                2.0
+            ],
+            [
+                0.9,
+                1.4
+            ],
+            [
+                0.1,
+                0.4
+            ],
+            [
+                0.1,
+                2.0
+            ]
+        ],
+        "bounds_3d": [
+            [
+                0.0,
+                5.0
+            ],
+            [
+                0.0,
+                5.0
+            ],
+            [
+                0.0,
+                5.0
+            ]
+        ]
+    },
+    "ellipse_fitting": {
+        "ellipse_search_radius_um": 400.0,
+        "ellipse_grid_step_um": 10.0,
+        "ellipse_density_radius_um": 30.0,
+        "ellipse_p80_multiplier": 3.0,
+        "ellipse_morph_closing_steps": 2,
+        "ellipse_fit_padding_um": 60.0,
+        "ellipse_params": {
+            "top_bottom": {
+                "cx": 0.0,
+                "cy": 140.0,
+                "width": 80.0,
+                "height": 140.0,
+                "angle_deg": 0.0
+            },
+            "left_right": {
+                "cx": 140.0,
+                "cy": 0.0,
+                "width": 140.0,
+                "height": 80.0,
+                "angle_deg": 0.0
+            },
+            "topleft_bottomright": {
+                "cx": 140.0,
+                "cy": 140.0,
+                "width": 140.0,
+                "height": 80.0,
+                "angle_deg": 45.0
+            },
+            "bottomleft_topright": {
+                "cx": 140.0,
+                "cy": -140.0,
+                "width": 140.0,
+                "height": 80.0,
+                "angle_deg": -45.0
+            }
+        }
+    },
+    "rf_params": {
+        "n_estimators": 200,
+        "max_depth": 12,
+        "min_samples_split": 4,
+        "min_samples_leaf": 2,
+        "class_weight": "balanced",
+        "extraction_batch_size": 250
+    }
+}

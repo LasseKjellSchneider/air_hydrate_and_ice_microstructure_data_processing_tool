@@ -1,0 +1,34 @@
+# GUI
+customtkinter
+
+# Bild- & Datenverarbeitung
+opencv-python
+pillow
+scikit-image
+imageio
+imagecodecs
+tifffile
+h5py
+numpy
+pandas
+scipy
+
+# Geodaten & GIS
+geopandas
+pyogrio
+rasterio
+shapely
+pyproj
+
+# Machine Learning & Visualisierung
+scikit-learn
+joblib
+matplotlib
+seaborn
+
+# System & Build
+psutil
+pyinstaller
+
+# GPU-Beschleunigung (NVIDIA)
+cupy-cuda12x[ctk]
